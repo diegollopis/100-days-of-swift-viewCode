@@ -177,6 +177,7 @@
 		3ED8736427774FD100035E09 /* Project1 */ = {
 			isa = PBXGroup;
 			children = (
+				3E6FB04C2778C1E0000A9D97 /* AppDelegate */,
 				3E6FB0502778C2AA000A9D97 /* Protocols */,
 				3E6FB04E2778C246000A9D97 /* Views */,
 				3E6FB04F2778C285000A9D97 /* Controllers */,
@@ -207,7 +208,6 @@
 			isa = PBXGroup;
 			children = (
 				3ED8736E27774FD600035E09 /* Assets.xcassets */,
-				3E6FB04C2778C1E0000A9D97 /* AppDelegate */,
 				3ED8739F277767D800035E09 /* nssl0033.jpg */,
 				3ED8739C277767D700035E09 /* nssl0034.jpg */,
 				3ED8739D277767D800035E09 /* nssl0041.jpg */,
