@@ -22,6 +22,15 @@ class FullImageViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .white
         navigationItem.largeTitleDisplayMode = .never
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(buttonSaveTapped))
+    }
+    
+    @objc func buttonSaveTapped() {
+        guard let image = imageView.fullImage.image?.jpegData(compressionQuality: 0.8) else { return }
+        
+        let vc = UIActivityViewController(activityItems: [image], applicationActivities: [])
+        vc.popoverPresentationController?.barButtonItem = navigationItem.rightBarButtonItem
+        present(vc, animated: true)
     }
     
     func setupImage(_ imageName: String) {
