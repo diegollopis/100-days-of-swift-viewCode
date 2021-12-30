@@ -9,7 +9,7 @@ import UIKit
 
 class FullImageView: UIView {
         
-    lazy var imageView: UIImageView = {
+    lazy var fullImage: UIImageView = {
         let image = UIImageView()
         image.contentMode = .scaleAspectFit
         image.clipsToBounds = true
@@ -30,11 +30,11 @@ class FullImageView: UIView {
 extension FullImageView: ViewCode {
     
     func configView() {
-        addSubview(imageView)
+        addSubview(fullImage)
     }
     
     func configConstraints() {
-        imageView.snp.makeConstraints { make in
+        fullImage.snp.makeConstraints { make in
             make.edges.equalToSuperview()
         }
     }
