@@ -8,7 +8,7 @@
 import UIKit
 
 class FullImageViewController: UIViewController {
-    
+                
     let imageView: FullImageView = {
         let image = FullImageView()
         return image
@@ -22,11 +22,10 @@ class FullImageViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .white
         navigationItem.largeTitleDisplayMode = .never
-        
     }
     
     func setupImage(_ imageName: String) {
-        imageView.imageView.image = UIImage(named: imageName)
+        imageView.fullImage.image = UIImage(named: imageName)
     }
     
     func setupTitle(cellNumber: Int, picturesList: [String]) {
