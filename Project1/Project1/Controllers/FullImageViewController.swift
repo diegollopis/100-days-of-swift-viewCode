@@ -22,6 +22,7 @@ class FullImageViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .white
         navigationItem.largeTitleDisplayMode = .never
+        
     }
     
     func setupImage(_ imageName: String) {
