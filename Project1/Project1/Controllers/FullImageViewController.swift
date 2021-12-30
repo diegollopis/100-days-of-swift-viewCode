@@ -22,20 +22,6 @@ class FullImageViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .white
         navigationItem.largeTitleDisplayMode = .never
-        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(shareButtonTapped))
-    }
-    
-    @objc func shareButtonTapped() {
-                
-        guard let image = imageView.fullImage.image?.jpegData(compressionQuality: 0.8) else {
-                print("No image found")
-                return
-            }
-        
-        let vc = UIActivityViewController(activityItems: [image], applicationActivities: [])
-        vc.popoverPresentationController?.barButtonItem = navigationItem.rightBarButtonItem
-        present(vc, animated: true)
-        
     }
     
     func setupImage(_ imageName: String) {

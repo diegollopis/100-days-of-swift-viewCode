@@ -30,6 +30,11 @@ class ImageTableViewController: UIViewController {
         
         title = "Storm Viewer"
         navigationController?.navigationBar.prefersLargeTitles = true
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Share", style: .plain, target: self, action: #selector(shareButtonTapped))
+    }
+    
+    @objc func shareButtonTapped() {
+        print("App compartilhado!")
     }
     
     func loadImages() {
